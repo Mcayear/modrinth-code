@@ -22,9 +22,7 @@
         community.
       </h2>
       <div class="button-group">
-        <ButtonStyled color="brand" size="large">
-          <nuxt-link to="/mods"> <CompassIcon aria-hidden="true" /> Discover mods </nuxt-link>
-        </ButtonStyled>
+        <!-- <ButtonStyled color="brand" size="large"> <nuxt-link to="/mods"> <CompassIcon aria-hidden="true" /> Discover mods </nuxt-link> </ButtonStyled> -->
         <ButtonStyled size="large" type="outlined">
           <nuxt-link v-if="!auth.user" to="/auth/sign-up" rel="noopener nofollow">
             <LogInIcon aria-hidden="true" />

@@ -66,19 +66,7 @@
       >
         <div class="hidden xl:contents">
           <ButtonStyled type="transparent">
-            <nuxt-link to="/mods" class="temp-nav-buttons"> Mods </nuxt-link>
-          </ButtonStyled>
-          <ButtonStyled type="transparent">
             <nuxt-link to="/resourcepacks" class="temp-nav-buttons"> Resource Packs </nuxt-link>
-          </ButtonStyled>
-          <ButtonStyled type="transparent">
-            <nuxt-link to="/datapacks" class="temp-nav-buttons"> Data Packs </nuxt-link>
-          </ButtonStyled>
-          <ButtonStyled type="transparent">
-            <nuxt-link to="/modpacks" class="temp-nav-buttons"> Modpacks </nuxt-link>
-          </ButtonStyled>
-          <ButtonStyled type="transparent">
-            <nuxt-link to="/shaders" class="temp-nav-buttons"> Shaders </nuxt-link>
           </ButtonStyled>
           <ButtonStyled type="transparent">
             <nuxt-link to="/plugins" class="temp-nav-buttons"> Plugins </nuxt-link>
@@ -90,41 +78,19 @@
               class="btn-dropdown-animation flex items-center gap-1 rounded-xl bg-transparent px-2 py-1"
               :options="[
                 {
-                  id: 'mods',
-                  link: '/mods',
-                },
-                {
                   id: 'resourcepacks',
                   link: '/resourcepacks',
-                },
-                {
-                  id: 'datapacks',
-                  link: '/datapacks',
                 },
                 {
                   id: 'plugins',
                   link: '/plugins',
                 },
-                {
-                  id: 'shaders',
-                  link: '/shaders',
-                },
-                {
-                  id: 'modpacks',
-                  link: '/modpacks',
-                },
               ]"
             >
               <CompassIcon aria-hidden="true" /> Browse
               <DropdownIcon aria-hidden="true" class="h-5 w-5 text-secondary" />
-              <template #mods> <BoxIcon aria-hidden="true" /> Mods </template>
-              <template #resourcepacks>
-                <PaintBrushIcon aria-hidden="true" /> Resource Packs
-              </template>
-              <template #datapacks> <BracesIcon aria-hidden="true" /> Data Packs </template>
+              <template #resourcepacks> <PaintBrushIcon aria-hidden="true" /> Resource Packs </template>
               <template #plugins> <ServerIcon aria-hidden="true" /> Plugins </template>
-              <template #shaders> <GlassesIcon aria-hidden="true" /> Shaders </template>
-              <template #modpacks> <PackageOpenIcon aria-hidden="true" /> Modpacks </template>
             </OverflowMenu>
           </ButtonStyled>
         </div>
@@ -735,28 +701,12 @@ const isMobileMenuOpen = ref(false);
 const isBrowseMenuOpen = ref(false);
 const navRoutes = computed(() => [
   {
-    label: formatMessage(getProjectTypeMessage("mod", true)),
-    href: "/mods",
-  },
-  {
     label: formatMessage(getProjectTypeMessage("plugin", true)),
     href: "/plugins",
   },
   {
-    label: formatMessage(getProjectTypeMessage("datapack", true)),
-    href: "/datapacks",
-  },
-  {
-    label: formatMessage(getProjectTypeMessage("shader", true)),
-    href: "/shaders",
-  },
-  {
     label: formatMessage(getProjectTypeMessage("resourcepack", true)),
     href: "/resourcepacks",
-  },
-  {
-    label: formatMessage(getProjectTypeMessage("modpack", true)),
-    href: "/modpacks",
   },
 ]);
 

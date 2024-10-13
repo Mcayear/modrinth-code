@@ -12,9 +12,9 @@
       }"
       aria-label="Filters"
     >
-      <AdPlaceholder
+      <!-- <AdPlaceholder
         v-if="!auth.user || !isPermission(auth.user.badges, 1 << 0) || flags.showAdsWithPlus"
-      />
+      /> -->
       <section class="card gap-1" :class="{ 'max-lg:!hidden': !sidebarMenuOpen }">
         <div class="flex items-center gap-2">
           <div class="iconified-input w-full">

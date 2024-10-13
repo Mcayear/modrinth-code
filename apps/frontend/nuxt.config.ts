@@ -200,7 +200,7 @@ export default defineNuxtConfig({
         1,
       );
 
-      const types = ["mods", "modpacks", "plugins", "resourcepacks", "shaders", "datapacks"];
+      const types = ["plugins", "resourcepacks"];
 
       types.forEach((type) =>
         routes.push({
@@ -370,6 +370,14 @@ export default defineNuxtConfig({
         meta: {
           static: {
             iso: "en",
+          },
+        },
+      },
+      {
+        tag: "zh-CN",
+        meta: {
+          static: {
+            iso: "zh",
           },
         },
       },
